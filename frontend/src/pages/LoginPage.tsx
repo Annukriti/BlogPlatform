@@ -17,8 +17,10 @@ const LoginPage = () => {
     setIsLoading(true);
 
     try {
-      const response = await apiService.login({ email, password });
-      login(response);
+//       const response = await apiService.login({ email, password });
+//       login(response);
+// Just call authContext.login(...) with the email and password directly:
+      await login(email, password);
       navigate('/');
     } catch (err: any) {
       setError(err.message || 'Failed to login. Please try again.');
