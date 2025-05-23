@@ -33,7 +33,7 @@ public class SecurityConfig {
         String email = "user@test.com";
         userRepository.findByEmail(email).orElseGet(() -> {
             User newUser = User.builder()
-                    .name("Test User")
+                    .name("Annukriti")
                     .email(email)
                     .password(passwordEncoder().encode("password"))
                     .build();
